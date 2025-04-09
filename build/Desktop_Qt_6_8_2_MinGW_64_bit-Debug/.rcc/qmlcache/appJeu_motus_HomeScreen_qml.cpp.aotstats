@@ -1,0 +1,180 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 16,
+                        "durationMicroseconds": 4545,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 805,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 314,
+                        "errorMessage": "",
+                        "functionName": "alignment",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 215,
+                        "errorMessage": "Cannot load property down from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 149,
+                        "errorMessage": "Cannot load property text from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 136,
+                        "errorMessage": "Cannot load property font from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "font",
+                        "line": 43
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 38,
+                        "durationMicroseconds": 274,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 45
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 241,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 46
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 73
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 156,
+                        "errorMessage": "Cannot load property down from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 61
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 174,
+                        "errorMessage": "Cannot load property text from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 66
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "Cannot load property font from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "font",
+                        "line": 67
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 38,
+                        "durationMicroseconds": 288,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 273,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 70
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 97
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "Cannot load property down from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 85
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "Cannot load property text from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 90
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 155,
+                        "errorMessage": "Cannot load property font from (component in C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "font",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 38,
+                        "durationMicroseconds": 272,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 93
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 238,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 94
+                    }
+                ],
+                "filepath": "C:/Users/Sarah/Desktop/Motus_cpp/HomeScreen.qml"
+            }
+        ],
+        "moduleId": "Jeu_motus(appJeu_motus)"
+    }
+]

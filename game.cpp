@@ -76,7 +76,9 @@ QVariantList Game::checkGuess(const QString &guess)
 
         int pos = remainingLetters.indexOf(upperGuess[i]);
         if (pos != -1) {
-            result[i].toMap()["status"] = "misplaced";
+            QVariantMap letterInfo = result[i].toMap();
+            letterInfo["status"] = "misplaced";
+            result[i] = letterInfo;  // Met à jour l'entrée dans la liste !
             remainingLetters[pos] = ' '; // Marquer comme utilisé
         }
     }

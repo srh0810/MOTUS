@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Jeu_motus">
+    <file alias="qmldir">C:/Users/Sarah/Desktop/Motus_cpp/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Jeu_motus/qmldir</file>
+  </qresource>
+</RCC>
+

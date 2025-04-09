@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "Dictionary",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "Dictionary",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "dictionary.h",
+    "outputRevision": 68
+}

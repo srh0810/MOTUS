@@ -15,6 +15,47 @@ Item {
     property color colorMisplaced: "#f0a044"         // Orange pour lettre mal placée
     property color colorWrong: "#7f8c8d"             // Gris pour lettre incorrecte
     property color colorKeyboardBg: "#a7c5f4"        // Fond du clavier (bleu clair)
+
+    // Fonction utilitaire pour obtenir le statut d'une touche de manière sécurisée
+    function getKeyStatus(letter) {
+        if (game && typeof game.getKeyStatus === "function") {
+            // Si une fonction existe côté backend, utiliser celle-ci
+            return game.getKeyStatus(letter) || "unused";
+        } else if (game && game.keyboardState) {
+            // Sinon, parcourir manuellement le tableau keyboardState
+            for (var i = 0; i < game.keyboardState.length; i++) {
+                var row = game.keyboardState[i];
+                for (var j = 0; j < row.length; j++) {
+                    if (row[j] && row[j].key === letter) {
+                        return row[j].status || "unused";
+                    }
+                }
+            }
+        }
+        return "unused";
+    }
+
+    // Fonction pour mettre à jour toutes les touches du clavier
+    function updateKeyboardColors() {
+        // Mettre à jour la première rangée
+        for (var i1 = 0; i1 < row1Repeater.count; i1++) {
+            var key1 = row1Repeater.itemAt(i1);
+            if (key1) key1.keyStatus = getKeyStatus(key1.letter);
+        }
+
+        // Mettre à jour la deuxième rangée
+        for (var i2 = 0; i2 < row2Repeater.count; i2++) {
+            var key2 = row2Repeater.itemAt(i2);
+            if (key2) key2.keyStatus = getKeyStatus(key2.letter);
+        }
+
+        // Mettre à jour la troisième rangée
+        for (var i3 = 0; i3 < row3Repeater.count; i3++) {
+            var key3 = row3Repeater.itemAt(i3);
+            if (key3) key3.keyStatus = getKeyStatus(key3.letter);
+        }
+    }
+
     Connections {
         target: game
         function onGridChanged() {
@@ -31,34 +72,15 @@ Item {
                     });
 
                     cell.cellColor = Qt.binding(function() {
-                        if (this.row === game.currentAttempt && this.col < game.currentGuess.length) {
-                            return colorAccent;
-                        }
                         var info = game.getCellInfo(this.row, this.col);
-                        switch(info.status) {
-                            case "correct": return colorCorrect;
-                            case "misplaced": return colorMisplaced;
-                            case "wrong": return colorWrong;
-                            default: return colorBackground;
-                        }
+                        if (info.status === "correct") return colorCorrect;
+                        if (info.status === "misplaced") return colorMisplaced;
+                        if (info.status === "wrong") return colorWrong;
+                        return colorBackground;  // Fond par défaut
                     });
                 }
             }
         }
-    }
-    // Fonction utilitaire pour obtenir le statut d'une touche de manière sécurisée
-    function getKeyStatus(letter) {
-        if (game && game.keyboardState && game.keyboardState.length > 0) {
-            var keyboardData = game.keyboardState[0];
-            if (keyboardData) {
-                for (var i = 0; i < keyboardData.length; i++) {
-                    if (keyboardData[i] && keyboardData[i]["key"] === letter) {
-                        return keyboardData[i]["status"] || "unused";
-                    }
-                }
-            }
-        }
-        return "unused";
     }
 
     Rectangle {
@@ -145,7 +167,7 @@ Item {
                         }
 
                         Text {
-                            text: "saintgenisloco"
+                            text: "user"
                             color: "white"
                             font.pixelSize: 16
                             Layout.fillWidth: true
@@ -552,6 +574,7 @@ Item {
                     spacing: 5
 
                     Repeater {
+                        id: row1Repeater
                         model: ["A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P"]
 
                         Rectangle {
@@ -561,38 +584,14 @@ Item {
                             radius: 5
 
                             property string letter: modelData
-                            property string keyStatus: {
-                                // Déterminer le statut de la touche de façon sécurisée
-                                if (game && game.keyboardState && game.keyboardState.length > 0) {
-                                    var keyboardData = game.keyboardState[0];
-                                    if (keyboardData) {
-                                        for (var i = 0; i < keyboardData.length; i++) {
-                                            if (keyboardData[i] && keyboardData[i]["key"] === letter) {
-                                                return keyboardData[i]["status"] || "unused";
-                                            }
-                                        }
-                                    }
-                                }
-                                return "unused";
-                            }
+                            // Utiliser la fonction getKeyStatus pour obtenir l'état
+                            property string keyStatus: getKeyStatus(letter)
 
                             // Couleurs dynamiques selon l'état de la touche
                             color: {
-                                // Récupérer le statut de la cellule depuis cellInfo
-                                var status = cellInfo["status"];
-
-                                // Cellules validées de n'importe quelle ligne
-                                if (status === "correct") return colorCorrect;      // Vert
-                                if (status === "misplaced") return colorMisplaced;  // Orange
-                                if (status === "wrong") return colorWrong;          // Gris
-
-                                // Cellules en cours de saisie (ligne active seulement)
-                                if (row === game.currentAttempt && col < game.currentGuess.length)
-                                    return colorAccent;  // Bleu
-                                if (row === game.currentAttempt && col === game.currentGuess.length)
-                                    return colorAccent + "80";  // Bleu semi-transparent
-
-                                // Cellules vides
+                                if (keyStatus === "correct") return colorCorrect;      // Vert
+                                if (keyStatus === "misplaced") return colorMisplaced;  // Orange
+                                if (keyStatus === "wrong") return colorWrong;          // Gris
                                 return colorBackground;  // Fond par défaut
                             }
 
@@ -601,7 +600,7 @@ Item {
                                 text: letter
                                 font.pixelSize: 24
                                 font.bold: true
-                                color: keyButton.keyStatus !== "unused" ? "white" : "black"
+                                color: parent.keyStatus !== "unused" ? "white" : "black"
                             }
 
                             MouseArea {
@@ -611,14 +610,6 @@ Item {
                                 onClicked: {
                                     if (game && game.gameActive) {
                                         game.keyPressed(letter);
-
-                                        // Forcer une actualisation des cellules de la ligne active
-                                        for (var i = 0; i < cellRepeater.count; i++) {
-                                            var cell = cellRepeater.itemAt(i);
-                                            if (cell && cell.row === game.currentAttempt) {
-                                                cell.displayText = cell.getDisplayText();
-                                            }
-                                        }
                                     }
                                 }
                             }
@@ -641,6 +632,7 @@ Item {
                     spacing: 5
 
                     Repeater {
+                        id: row2Repeater
                         model: ["Q", "S", "D", "F", "G", "H", "J", "K", "L", "M"]
 
                         Rectangle {
@@ -650,26 +642,14 @@ Item {
                             radius: 5
 
                             property string letter: modelData
-                            property string keyStatus: {
-                                // Déterminer le statut de la touche de façon sécurisée
-                                if (game && game.keyboardState && game.keyboardState.length > 0) {
-                                    var keyboardData = game.keyboardState[0];
-                                    if (keyboardData) {
-                                        for (var i = 0; i < keyboardData.length; i++) {
-                                            if (keyboardData[i] && keyboardData[i]["key"] === letter) {
-                                                return keyboardData[i]["status"] || "unused";
-                                            }
-                                        }
-                                    }
-                                }
-                                return "unused";
-                            }
+                            // Utiliser la fonction getKeyStatus pour obtenir l'état
+                            property string keyStatus: getKeyStatus(letter)
 
                             color: {
                                 if (keyStatus === "correct") return colorCorrect;
                                 if (keyStatus === "misplaced") return colorMisplaced;
                                 if (keyStatus === "wrong") return colorWrong;
-                                return "white";
+                                return colorBackground;  // Fond par défaut
                             }
 
                             Text {
@@ -677,7 +657,7 @@ Item {
                                 text: letter
                                 font.pixelSize: 24
                                 font.bold: true
-                                color: keyButton2.keyStatus !== "unused" ? "white" : "black"
+                                color: parent.keyStatus !== "unused" ? "white" : "black"
                             }
 
                             MouseArea {
@@ -687,14 +667,6 @@ Item {
                                 onClicked: {
                                     if (game && game.gameActive) {
                                         game.keyPressed(letter);
-
-                                        // Forcer une actualisation des cellules de la ligne active
-                                        for (var i = 0; i < cellRepeater.count; i++) {
-                                            var cell = cellRepeater.itemAt(i);
-                                            if (cell && cell.row === game.currentAttempt) {
-                                                cell.displayText = cell.getDisplayText();
-                                            }
-                                        }
                                     }
                                 }
                             }
@@ -737,14 +709,6 @@ Item {
                             onClicked: {
                                 if (game && game.gameActive) {
                                     game.backspacePressed();
-
-                                    // Forcer une actualisation des cellules de la ligne active
-                                    for (var i = 0; i < cellRepeater.count; i++) {
-                                        var cell = cellRepeater.itemAt(i);
-                                        if (cell && cell.row === game.currentAttempt) {
-                                            cell.displayText = cell.getDisplayText();
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -759,6 +723,7 @@ Item {
 
                     // Autres touches
                     Repeater {
+                        id: row3Repeater
                         model: ["W", "X", "C", "V", "B", "N"]
 
                         Rectangle {
@@ -768,26 +733,14 @@ Item {
                             radius: 5
 
                             property string letter: modelData
-                            property string keyStatus: {
-                                // Déterminer le statut de la touche de façon sécurisée
-                                if (game && game.keyboardState && game.keyboardState.length > 0) {
-                                    var keyboardData = game.keyboardState[0];
-                                    if (keyboardData) {
-                                        for (var i = 0; i < keyboardData.length; i++) {
-                                            if (keyboardData[i] && keyboardData[i]["key"] === letter) {
-                                                return keyboardData[i]["status"] || "unused";
-                                            }
-                                        }
-                                    }
-                                }
-                                return "unused";
-                            }
+                            // Utiliser la fonction getKeyStatus pour obtenir l'état
+                            property string keyStatus: getKeyStatus(letter)
 
                             color: {
                                 if (keyStatus === "correct") return colorCorrect;
                                 if (keyStatus === "misplaced") return colorMisplaced;
                                 if (keyStatus === "wrong") return colorWrong;
-                                return "white";
+                                return colorBackground;  // Fond par défaut
                             }
 
                             Text {
@@ -795,7 +748,7 @@ Item {
                                 text: letter
                                 font.pixelSize: 24
                                 font.bold: true
-                                color: keyButton3.keyStatus !== "unused" ? "white" : "black"
+                                color: parent.keyStatus !== "unused" ? "white" : "black"
                             }
 
                             MouseArea {
@@ -805,14 +758,6 @@ Item {
                                 onClicked: {
                                     if (game && game.gameActive) {
                                         game.keyPressed(letter);
-
-                                        // Forcer une actualisation des cellules de la ligne active
-                                        for (var i = 0; i < cellRepeater.count; i++) {
-                                            var cell = cellRepeater.itemAt(i);
-                                            if (cell && cell.row === game.currentAttempt) {
-                                                cell.displayText = cell.getDisplayText();
-                                            }
-                                        }
                                     }
                                 }
                             }
@@ -1255,23 +1200,28 @@ Item {
 
                     // Capture des touches du clavier physique
                     focus: true
+
                     Keys.onPressed: function(event) {
-                        if (!game.gameActive) {
-                            return;
-                        }
+                        if (!game.gameActive) return;
 
                         // A-Z et a-z
                         if ((event.key >= Qt.Key_A && event.key <= Qt.Key_Z) ||
                             (event.key >= Qt.Key_A + 32 && event.key <= Qt.Key_Z + 32)) {
-                            var letter = String.fromCharCode(event.key).toUpperCase();
-                            game.keyPressed(letter);
+                            var pressedLetter = String.fromCharCode(event.key).toUpperCase();
+                            game.keyPressed(pressedLetter);
                             event.accepted = true;
 
-                            // Forcer actualisation de toutes les cellules actives
-                            for (var i = 0; i < cellRepeater.count; i++) {
-                                var cell = cellRepeater.itemAt(i);
-                                if (cell && cell.row === game.currentAttempt) {
-                                    cell.displayText = cell.getDisplayText();
+                            // Actualisation des cellules avec des noms de variables uniques
+                            for (var cellIdx = 0; cellIdx < cellRepeater.count; cellIdx++) {
+                                var currentCell = cellRepeater.itemAt(cellIdx);
+                                if (currentCell && currentCell.row === game.currentAttempt) {
+                                    currentCell.displayText = Qt.binding(function() {
+                                        if (this.col < game.currentGuess.length) {
+                                            return game.currentGuess.charAt(this.col).toUpperCase();
+                                        }
+                                        var cellInfo = game.getCellInfo(this.row, this.col);
+                                        return cellInfo.letter || "";
+                                    });
                                 }
                             }
                         }
@@ -1280,11 +1230,15 @@ Item {
                             game.backspacePressed();
                             event.accepted = true;
 
-                            // Forcer actualisation
-                            for (var i = 0; i < cellRepeater.count; i++) {
-                                var cell = cellRepeater.itemAt(i);
-                                if (cell && cell.row === game.currentAttempt) {
-                                    cell.displayText = cell.getDisplayText();
+                            for (var bsCellIdx = 0; bsCellIdx < cellRepeater.count; bsCellIdx++) {
+                                var bsCell = cellRepeater.itemAt(bsCellIdx);
+                                if (bsCell && bsCell.row === game.currentAttempt) {
+                                    bsCell.displayText = Qt.binding(function() {
+                                        if (this.col < game.currentGuess.length) {
+                                            return game.currentGuess.charAt(this.col).toUpperCase();
+                                        }
+                                        return "";
+                                    });
                                 }
                             }
                         }
@@ -1306,32 +1260,42 @@ Item {
                         }
 
                         function onGameStarted() {
-                            // Réinitialiser l'affichage de la grille en toute sécurité
+                            // Réinitialiser la grille
                             if (cellRepeater && cellRepeater.count > 0) {
                                 for (var i = 0; i < cellRepeater.count; i++) {
                                     var cell = cellRepeater.itemAt(i);
                                     if (cell) {
-                                        cell.displayText = cell.getDisplayText();
+                                        cell.displayText = "";
+                                        cell.cellColor = colorBackground; // Réinitialiser la couleur
                                     }
                                 }
                             }
+                            updateKeyboardColors(); // Mettre à jour le clavier
                         }
 
                         function onCurrentGuessChanged() {
-                            // Force un refresh explicite de la grille en toute sécurité
                             if (cellRepeater && cellRepeater.count > 0) {
-                                for (var i = 0; i < cellRepeater.count; i++) {
-                                    var cell = cellRepeater.itemAt(i);
-                                    if (cell && cell.row === game.currentAttempt) {
-                                        cell.displayText = cell.getDisplayText();
+                                for (var gcIdx = 0; gcIdx < cellRepeater.count; gcIdx++) {
+                                    var gcCell = cellRepeater.itemAt(gcIdx);
+                                    if (gcCell && gcCell.row === game.currentAttempt) {
+                                        gcCell.displayText = Qt.binding(function() {
+                                            if (this.col < game.currentGuess.length) {
+                                                return game.currentGuess.charAt(this.col).toUpperCase();
+                                            }
+                                            var gcInfo = game.getCellInfo(this.row, this.col);
+                                            return gcInfo.letter || "";
+                                        });
                                     }
                                 }
                             }
                         }
 
                         function onKeyboardStateChanged() {
-                            // Force un rafraîchissement du clavier
-                            gameScreen.forceActiveFocus();
+                                updateKeyboardColors();
+                        }
+
+                        function onAttemptSubmitted() {
+                                updateKeyboardColors();
                         }
                     }
 
@@ -1351,3 +1315,4 @@ Item {
                     }
 
                 }
+

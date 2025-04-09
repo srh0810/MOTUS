@@ -7,7 +7,7 @@ Dictionary::Dictionary(const QString &dictionaryPath, QObject *parent)
     : QObject(parent)
     , m_dictionaryPath(dictionaryPath)
 {
-    loadDictionary("/Users/ameltebboune/Desktop/Jeu_motus/dictionnaire.txt");
+    loadDictionary("./dictionnaire.txt");
 }
 
 bool Dictionary::containsWord(const QString &word) const
