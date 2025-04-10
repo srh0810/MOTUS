@@ -9,748 +9,796 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "getKeyStatus",
-                        "line": 20
+                        "line": 21
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
                         "column": 5,
-                        "durationMicroseconds": 1649,
-                        "errorMessage": "Cannot load property letter from QQuickItem.",
+                        "durationMicroseconds": 398,
+                        "errorMessage": "",
                         "functionName": "updateKeyboardColors",
-                        "line": 39
+                        "line": 40
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 290,
+                        "durationMicroseconds": 526,
                         "errorMessage": "Cannot access value for name timer",
                         "functionName": "onVisibleChanged",
-                        "line": 1303
+                        "line": 1203
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 105,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "target",
-                        "line": 60
+                        "line": 45
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 169,
+                        "durationMicroseconds": 322,
                         "errorMessage": "Type QQuickItem does not have a property displayText for writing",
                         "functionName": "onGridChanged",
-                        "line": 61
+                        "line": 46
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 57,
                         "errorMessage": "Cannot access value for name colorBackground",
                         "functionName": "color",
-                        "line": 88
+                        "line": 73
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 2686,
+                        "durationMicroseconds": 300,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 72
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 180,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 77
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 20,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "Cannot access value for name colorHeader",
+                        "functionName": "color",
+                        "line": 84
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 168,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 87
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 23,
-                        "durationMicroseconds": 326,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 92
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 20,
-                        "durationMicroseconds": 80,
-                        "errorMessage": "Cannot access value for name colorHeader",
-                        "functionName": "color",
-                        "line": 99
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 31,
-                        "durationMicroseconds": 169,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 102
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 261,
+                        "durationMicroseconds": 256,
                         "errorMessage": "",
                         "functionName": "fillMode",
-                        "line": 115
+                        "line": 100
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 157,
+                        "durationMicroseconds": 165,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name colorAccent",
+                        "functionName": "color",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 179,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 105
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 674,
+                        "errorMessage": "method backToHomeClicked cannot be resolved.",
+                        "functionName": "onClicked",
+                        "line": 114
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 113
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 32,
-                        "durationMicroseconds": 93,
+                        "column": 28,
+                        "durationMicroseconds": 80,
                         "errorMessage": "Cannot access value for name colorAccent",
                         "functionName": "color",
                         "line": 122
                     },
                     {
-                        "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 159,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 120
-                    },
-                    {
                         "codegenSuccessfull": false,
-                        "column": 36,
-                        "durationMicroseconds": 779,
-                        "errorMessage": "method backToHomeClicked cannot be resolved.",
-                        "functionName": "onClicked",
-                        "line": 129
+                        "column": 28,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "Cannot access value for name colorAccent",
+                        "functionName": "color",
+                        "line": 131
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 193,
+                        "durationMicroseconds": 201,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 128
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 83,
-                        "errorMessage": "Cannot access value for name colorAccent",
-                        "functionName": "color",
-                        "line": 137
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 70,
-                        "errorMessage": "Cannot access value for name colorAccent",
-                        "functionName": "color",
-                        "line": 146
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 193,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 150
+                        "line": 135
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 89,
                         "errorMessage": "Cannot access value for name colorAccent",
                         "functionName": "color",
-                        "line": 164
+                        "line": 149
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 238,
+                        "durationMicroseconds": 180,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 162
+                        "line": 147
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 122,
+                        "durationMicroseconds": 64,
                         "errorMessage": "Cannot access value for name colorBackground",
                         "functionName": "color",
-                        "line": 184
+                        "line": 170
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 240,
+                        "durationMicroseconds": 188,
                         "errorMessage": "",
                         "functionName": "fill",
+                        "line": 173
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 88,
+                        "errorMessage": "Cannot access value for name colorBackground",
+                        "functionName": "color",
+                        "line": 181
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 211,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
                         "line": 187
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 86,
-                        "errorMessage": "Cannot access value for name colorBackground",
-                        "functionName": "color",
+                        "column": 36,
+                        "durationMicroseconds": 298,
+                        "errorMessage": "Cannot access value for name game",
+                        "functionName": "onClicked",
                         "line": 195
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 735,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 201
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 36,
-                        "durationMicroseconds": 457,
-                        "errorMessage": "Cannot access value for name game",
-                        "functionName": "onClicked",
-                        "line": 209
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 183,
+                        "durationMicroseconds": 129,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 208
+                        "line": 194
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 75,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot access value for name colorBackground",
                         "functionName": "color",
-                        "line": 221
+                        "line": 208
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 188,
+                        "durationMicroseconds": 122,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 227
+                        "line": 215
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 50,
-                        "durationMicroseconds": 348,
+                        "durationMicroseconds": 174,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
+                        "line": 230
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: wordLengthMenu",
+                        "functionName": "onClicked",
                         "line": 242
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 36,
-                        "durationMicroseconds": 1245,
-                        "errorMessage": "",
-                        "functionName": "onClicked",
-                        "line": 255
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 236,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 254
+                        "line": 241
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on y.",
+                        "functionName": "y",
+                        "line": 248
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on width.",
+                        "functionName": "width",
+                        "line": 249
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 32,
-                        "durationMicroseconds": 414,
+                        "column": 36,
+                        "durationMicroseconds": 263,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 263
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 38,
-                        "durationMicroseconds": 371,
-                        "errorMessage": "",
-                        "functionName": "top",
-                        "line": 267
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 176,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 271
+                        "line": 260
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 827,
+                        "durationMicroseconds": 609,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
-                        "line": 274
+                        "line": 262
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 249,
+                        "durationMicroseconds": 374,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 277
+                        "line": 264
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 925,
+                        "durationMicroseconds": 789,
                         "errorMessage": "",
                         "functionName": "color",
-                        "line": 279
+                        "line": 266
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 47,
-                        "durationMicroseconds": 522,
+                        "durationMicroseconds": 491,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
-                        "line": 283
+                        "line": 270
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 59,
-                        "durationMicroseconds": 132,
+                        "durationMicroseconds": 126,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 282
+                        "line": 269
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 275,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "onClicked",
-                        "line": 290
+                        "line": 277
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 123,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 288
+                        "line": 275
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 58,
                         "errorMessage": "Cannot access value for name colorBackground",
                         "functionName": "color",
-                        "line": 313
+                        "line": 298
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 113,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 319
+                        "line": 304
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 350,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 327
+                        "line": 312
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 326
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 48,
-                        "errorMessage": "Cannot access value for name colorBackground",
-                        "functionName": "color",
-                        "line": 337
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 103,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 343
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 36,
-                        "durationMicroseconds": 70,
-                        "errorMessage": "",
-                        "functionName": "onClicked",
-                        "line": 351
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 99,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 350
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 52,
-                        "errorMessage": "Cannot access value for name colorBackground",
-                        "functionName": "color",
-                        "line": 361
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 144,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 367
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 36,
-                        "durationMicroseconds": 99,
-                        "errorMessage": "",
-                        "functionName": "onClicked",
-                        "line": 375
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 145,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 374
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 28,
-                        "durationMicroseconds": 69,
-                        "errorMessage": "Cannot access value for name colorBackground",
-                        "functionName": "color",
-                        "line": 385
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 262,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 391
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 36,
-                        "durationMicroseconds": 418,
-                        "errorMessage": "",
-                        "functionName": "onClicked",
-                        "line": 399
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 710,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 398
+                        "line": 311
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 209,
+                        "durationMicroseconds": 43,
                         "errorMessage": "Cannot access value for name colorBackground",
                         "functionName": "color",
-                        "line": 411
+                        "line": 324
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 269,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 414
+                        "line": 327
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 588,
+                        "durationMicroseconds": 367,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "text",
-                        "line": 433
+                        "line": 346
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 170,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 432
+                        "line": 345
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 492,
+                        "durationMicroseconds": 315,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "text",
-                        "line": 443
+                        "line": 356
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 465,
+                        "durationMicroseconds": 321,
                         "errorMessage": "Cannot access value for name timer",
                         "functionName": "text",
-                        "line": 453
+                        "line": 366
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 319,
+                        "durationMicroseconds": 245,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "columns",
-                        "line": 468
+                        "line": 381
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 180,
+                        "durationMicroseconds": 122,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 467
+                        "line": 380
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 299,
+                        "durationMicroseconds": 425,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "model",
-                        "line": 475
+                        "line": 388
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 117,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "row",
-                        "line": 485
+                        "line": 398
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 57,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "col",
-                        "line": 486
+                        "line": 399
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 400,
+                        "durationMicroseconds": 464,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "displayText",
-                        "line": 489
+                        "line": 402
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 51,
-                        "durationMicroseconds": 353,
+                        "durationMicroseconds": 410,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "cellColor",
-                        "line": 498
+                        "line": 411
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 250,
+                        "durationMicroseconds": 264,
                         "errorMessage": "",
                         "functionName": "color",
-                        "line": 512
+                        "line": 425
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 168,
+                        "durationMicroseconds": 179,
                         "errorMessage": "Cannot load property displayText from (component in C:/Users/Sarah/Desktop/Motus_cpp/GameScreen.qml)::parent with type QQuickItem.",
                         "functionName": "text",
-                        "line": 516
+                        "line": 429
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 174,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 515
+                        "line": 428
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 83,
+                        "durationMicroseconds": 95,
                         "errorMessage": "Cannot access value for name row",
                         "functionName": "visible",
-                        "line": 529
+                        "line": 442
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 166,
+                        "durationMicroseconds": 168,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 524
+                        "line": 437
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 799,
+                        "durationMicroseconds": 171,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 545
+                        "line": 458
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 553
+                        "line": 466
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 223,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 552
+                        "line": 465
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 72,
                         "errorMessage": "Cannot access value for name colorKeyboardBg",
                         "functionName": "color",
-                        "line": 563
+                        "line": 476
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 164,
+                        "durationMicroseconds": 174,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 566
+                        "line": 479
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 1771,
+                        "durationMicroseconds": 1620,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
-                        "line": 578
+                        "line": 491
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 53,
-                        "durationMicroseconds": 420,
+                        "durationMicroseconds": 470,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "letter",
-                        "line": 586
+                        "line": 499
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 56,
-                        "durationMicroseconds": 509,
+                        "durationMicroseconds": 563,
                         "errorMessage": "method getKeyStatus cannot be resolved.",
                         "functionName": "keyStatus",
-                        "line": 588
+                        "line": 501
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 126,
-                        "errorMessage": "Cannot access value for name colorCorrect",
+                        "durationMicroseconds": 78,
+                        "errorMessage": "Cannot access value for name colorKeyboardBg",
                         "functionName": "color",
-                        "line": 591
+                        "line": 504
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot access value for name letter",
                         "functionName": "text",
-                        "line": 600
+                        "line": 511
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 159,
+                        "durationMicroseconds": 172,
                         "errorMessage": "Cannot load property keyStatus from (component in C:/Users/Sarah/Desktop/Motus_cpp/GameScreen.qml)::parent with type QQuickItem.",
                         "functionName": "color",
-                        "line": 603
+                        "line": 514
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 175,
+                        "durationMicroseconds": 198,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 599
+                        "line": 510
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 419,
+                        "durationMicroseconds": 467,
                         "errorMessage": "",
                         "functionName": "onPressed",
-                        "line": 608
+                        "line": 519
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 474,
+                        "durationMicroseconds": 450,
                         "errorMessage": "",
                         "functionName": "onReleased",
-                        "line": 609
+                        "line": 520
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 679,
+                        "durationMicroseconds": 414,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "onClicked",
-                        "line": 610
+                        "line": 521
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 221,
+                        "durationMicroseconds": 167,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 607
+                        "line": 518
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 50,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 229,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 621
+                        "line": 532
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 1630,
+                        "durationMicroseconds": 1543,
+                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
+                        "functionName": "model",
+                        "line": 547
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 53,
+                        "durationMicroseconds": 470,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "letter",
+                        "line": 555
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 56,
+                        "durationMicroseconds": 525,
+                        "errorMessage": "method getKeyStatus cannot be resolved.",
+                        "functionName": "keyStatus",
+                        "line": 557
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "Cannot access value for name colorKeyboardBg",
+                        "functionName": "color",
+                        "line": 559
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 39,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "Cannot access value for name letter",
+                        "functionName": "text",
+                        "line": 566
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 40,
+                        "durationMicroseconds": 173,
+                        "errorMessage": "Cannot load property keyStatus from (component in C:/Users/Sarah/Desktop/Motus_cpp/GameScreen.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 569
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 197,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 565
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 428,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 574
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 45,
+                        "durationMicroseconds": 432,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 575
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 44,
+                        "durationMicroseconds": 455,
+                        "errorMessage": "Cannot access value for name game",
+                        "functionName": "onClicked",
+                        "line": 576
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 47,
+                        "durationMicroseconds": 186,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 573
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 50,
+                        "durationMicroseconds": 230,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 586
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 47,
+                        "durationMicroseconds": 191,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 608
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 460,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 616
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 419,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 617
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 40,
+                        "durationMicroseconds": 550,
+                        "errorMessage": "Cannot access value for name game",
+                        "functionName": "onClicked",
+                        "line": 618
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 171,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 615
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 46,
+                        "durationMicroseconds": 220,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 628
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 904,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
                         "line": 636
@@ -758,7 +806,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 53,
-                        "durationMicroseconds": 499,
+                        "durationMicroseconds": 518,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "letter",
                         "line": 644
@@ -766,7 +814,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 56,
-                        "durationMicroseconds": 514,
+                        "durationMicroseconds": 546,
                         "errorMessage": "method getKeyStatus cannot be resolved.",
                         "functionName": "keyStatus",
                         "line": 646
@@ -774,626 +822,498 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 132,
-                        "errorMessage": "Cannot access value for name colorCorrect",
+                        "durationMicroseconds": 116,
+                        "errorMessage": "Cannot access value for name colorKeyboardBg",
                         "functionName": "color",
                         "line": 648
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 93,
                         "errorMessage": "Cannot access value for name letter",
                         "functionName": "text",
-                        "line": 657
+                        "line": 655
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 121,
                         "errorMessage": "Cannot load property keyStatus from (component in C:/Users/Sarah/Desktop/Motus_cpp/GameScreen.qml)::parent with type QQuickItem.",
                         "functionName": "color",
-                        "line": 660
+                        "line": 658
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 181,
+                        "durationMicroseconds": 135,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 656
+                        "line": 654
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 449,
+                        "durationMicroseconds": 335,
                         "errorMessage": "",
                         "functionName": "onPressed",
+                        "line": 663
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 45,
+                        "durationMicroseconds": 289,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 664
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 44,
+                        "durationMicroseconds": 299,
+                        "errorMessage": "Cannot access value for name game",
+                        "functionName": "onClicked",
                         "line": 665
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 45,
-                        "durationMicroseconds": 378,
-                        "errorMessage": "",
-                        "functionName": "onReleased",
-                        "line": 666
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 44,
-                        "durationMicroseconds": 413,
-                        "errorMessage": "Cannot access value for name game",
-                        "functionName": "onClicked",
-                        "line": 667
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 160,
+                        "durationMicroseconds": 121,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 664
+                        "line": 662
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 50,
-                        "durationMicroseconds": 205,
+                        "durationMicroseconds": 159,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 677
+                        "line": 675
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 115,
                         "errorMessage": "",
                         "functionName": "centerIn",
+                        "line": 690
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 379,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 698
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 289,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
                         "line": 699
                     },
                     {
-                        "codegenSuccessfull": true,
-                        "column": 40,
-                        "durationMicroseconds": 428,
-                        "errorMessage": "",
-                        "functionName": "onPressed",
-                        "line": 707
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 41,
-                        "durationMicroseconds": 414,
-                        "errorMessage": "",
-                        "functionName": "onReleased",
-                        "line": 708
-                    },
-                    {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 505,
+                        "durationMicroseconds": 449,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "onClicked",
-                        "line": 709
+                        "line": 700
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 165,
+                        "durationMicroseconds": 126,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 706
+                        "line": 697
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 46,
-                        "durationMicroseconds": 213,
+                        "durationMicroseconds": 158,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 719
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 32,
-                        "durationMicroseconds": 1332,
-                        "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
-                        "functionName": "model",
-                        "line": 727
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 53,
-                        "durationMicroseconds": 456,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "letter",
-                        "line": 735
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 56,
-                        "durationMicroseconds": 491,
-                        "errorMessage": "method getKeyStatus cannot be resolved.",
-                        "functionName": "keyStatus",
-                        "line": 737
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 36,
-                        "durationMicroseconds": 132,
-                        "errorMessage": "Cannot access value for name colorCorrect",
-                        "functionName": "color",
-                        "line": 739
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 39,
-                        "durationMicroseconds": 73,
-                        "errorMessage": "Cannot access value for name letter",
-                        "functionName": "text",
-                        "line": 748
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 161,
-                        "errorMessage": "Cannot load property keyStatus from (component in C:/Users/Sarah/Desktop/Motus_cpp/GameScreen.qml)::parent with type QQuickItem.",
-                        "functionName": "color",
-                        "line": 751
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 51,
-                        "durationMicroseconds": 234,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 747
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 44,
-                        "durationMicroseconds": 439,
-                        "errorMessage": "",
-                        "functionName": "onPressed",
-                        "line": 756
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 45,
-                        "durationMicroseconds": 423,
-                        "errorMessage": "",
-                        "functionName": "onReleased",
-                        "line": 757
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 44,
-                        "durationMicroseconds": 601,
-                        "errorMessage": "Cannot access value for name game",
-                        "functionName": "onClicked",
-                        "line": 758
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 47,
-                        "durationMicroseconds": 578,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 755
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 50,
-                        "durationMicroseconds": 266,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 768
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 47,
-                        "durationMicroseconds": 166,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 783
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 40,
-                        "durationMicroseconds": 439,
-                        "errorMessage": "",
-                        "functionName": "onPressed",
-                        "line": 791
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 41,
-                        "durationMicroseconds": 369,
-                        "errorMessage": "",
-                        "functionName": "onReleased",
-                        "line": 792
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 657,
-                        "errorMessage": "Cannot access value for name game",
-                        "functionName": "onClicked",
-                        "line": 793
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 192,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 790
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 46,
-                        "durationMicroseconds": 911,
-                        "errorMessage": "",
-                        "functionName": "type",
-                        "line": 803
+                        "line": 710
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 114,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 815
+                        "line": 722
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 261,
+                        "durationMicroseconds": 177,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 825
+                        "line": 732
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 45,
                         "errorMessage": "Cannot access value for name colorHeader",
                         "functionName": "color",
-                        "line": 827
+                        "line": 734
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 116,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 831
+                        "line": 738
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 350,
+                        "durationMicroseconds": 238,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 839
+                        "line": 746
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 57,
-                        "durationMicroseconds": 312,
+                        "durationMicroseconds": 291,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
-                        "line": 841
+                        "line": 748
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 81,
+                        "durationMicroseconds": 54,
                         "errorMessage": "Cannot access value for name colorHeader",
                         "functionName": "color",
-                        "line": 851
+                        "line": 758
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 183,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 848
+                        "line": 755
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 48,
-                        "durationMicroseconds": 372,
+                        "durationMicroseconds": 263,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 856
+                        "line": 763
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 163,
+                        "durationMicroseconds": 162,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 855
+                        "line": 762
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 248,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "contentHeight",
-                        "line": 867
+                        "line": 774
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 373,
+                        "durationMicroseconds": 269,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 769
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 263,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 770
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 266,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 771
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 45,
+                        "durationMicroseconds": 460,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 772
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 340,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 779
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 721,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 783
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 263,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 790
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 47,
+                        "durationMicroseconds": 220,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 792
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 247,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 796
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 47,
+                        "durationMicroseconds": 215,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 798
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 48,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "Cannot access value for name colorCorrect",
+                        "functionName": "color",
+                        "line": 807
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 65,
+                        "durationMicroseconds": 320,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 812
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 48,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "Cannot access value for name colorMisplaced",
+                        "functionName": "color",
+                        "line": 822
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 65,
+                        "durationMicroseconds": 317,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 827
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 48,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "Cannot access value for name colorWrong",
+                        "functionName": "color",
+                        "line": 837
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 65,
+                        "durationMicroseconds": 315,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 842
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 177,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 852
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 433,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 865
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 46,
+                        "durationMicroseconds": 316,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 862
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 325,
+                        "column": 59,
+                        "durationMicroseconds": 342,
                         "errorMessage": "",
-                        "functionName": "left",
-                        "line": 863
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 44,
-                        "durationMicroseconds": 311,
-                        "errorMessage": "",
-                        "functionName": "right",
+                        "functionName": "horizontalCenter",
                         "line": 864
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 45,
-                        "durationMicroseconds": 357,
+                        "column": 44,
+                        "durationMicroseconds": 256,
                         "errorMessage": "",
-                        "functionName": "bottom",
-                        "line": 865
+                        "functionName": "width",
+                        "line": 869
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 40,
-                        "durationMicroseconds": 249,
+                        "column": 58,
+                        "durationMicroseconds": 209,
                         "errorMessage": "",
-                        "functionName": "width",
+                        "functionName": "horizontalAlignment",
                         "line": 872
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 44,
-                        "durationMicroseconds": 413,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 876
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 44,
-                        "durationMicroseconds": 330,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 883
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 219,
+                        "durationMicroseconds": 199,
                         "errorMessage": "",
                         "functionName": "wrapMode",
-                        "line": 885
+                        "line": 873
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 224,
+                        "durationMicroseconds": 259,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 889
+                        "line": 877
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 47,
-                        "durationMicroseconds": 211,
-                        "errorMessage": "",
-                        "functionName": "wrapMode",
-                        "line": 891
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 48,
-                        "durationMicroseconds": 76,
-                        "errorMessage": "Cannot access value for name colorCorrect",
-                        "functionName": "color",
-                        "line": 900
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 65,
-                        "durationMicroseconds": 301,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 905
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 48,
-                        "durationMicroseconds": 71,
-                        "errorMessage": "Cannot access value for name colorMisplaced",
-                        "functionName": "color",
-                        "line": 915
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 65,
-                        "durationMicroseconds": 304,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 920
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 48,
-                        "durationMicroseconds": 68,
-                        "errorMessage": "Cannot access value for name colorWrong",
-                        "functionName": "color",
-                        "line": 930
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 65,
-                        "durationMicroseconds": 1401,
-                        "errorMessage": "",
-                        "functionName": "verticalCenter",
-                        "line": 935
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 43,
+                        "column": 58,
                         "durationMicroseconds": 204,
                         "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 945
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 36,
-                        "durationMicroseconds": 1104,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 957
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 208,
-                        "errorMessage": "",
-                        "functionName": "wrapMode",
-                        "line": 958
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 50,
-                        "durationMicroseconds": 183,
-                        "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 959
+                        "line": 880
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 155,
+                        "durationMicroseconds": 223,
                         "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 954
+                        "functionName": "wrapMode",
+                        "line": 881
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 73,
                         "errorMessage": "Cannot access value for name colorAccent",
                         "functionName": "color",
-                        "line": 968
+                        "line": 892
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 334,
+                        "durationMicroseconds": 453,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 963
+                        "line": 887
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 287,
+                        "durationMicroseconds": 327,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 964
+                        "line": 888
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 153,
+                        "durationMicroseconds": 162,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 972
+                        "line": 896
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 401,
+                        "durationMicroseconds": 418,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 980
+                        "line": 904
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 151,
+                        "durationMicroseconds": 160,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 979
+                        "line": 903
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 113,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "target",
-                        "line": 985
+                        "line": 909
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 664,
+                        "durationMicroseconds": 456,
                         "errorMessage": "",
                         "functionName": "onInvalidWord",
-                        "line": 986
+                        "line": 910
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 192,
+                        "durationMicroseconds": 189,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 999
+                        "line": 923
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 227,
+                        "durationMicroseconds": 220,
                         "errorMessage": "",
                         "functionName": "from",
-                        "line": 1001
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 37,
-                        "durationMicroseconds": 375,
-                        "errorMessage": "",
-                        "functionName": "to",
-                        "line": 1002
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 41,
-                        "durationMicroseconds": 226,
-                        "errorMessage": "",
-                        "functionName": "target",
-                        "line": 1006
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 375,
-                        "errorMessage": "",
-                        "functionName": "from",
-                        "line": 1008
+                        "line": 925
                     },
                     {
                         "codegenSuccessfull": true,
@@ -1401,55 +1321,79 @@
                         "durationMicroseconds": 399,
                         "errorMessage": "",
                         "functionName": "to",
-                        "line": 1009
+                        "line": 926
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 182,
+                        "durationMicroseconds": 191,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 1013
+                        "line": 930
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 716,
+                        "durationMicroseconds": 412,
                         "errorMessage": "",
                         "functionName": "from",
-                        "line": 1015
+                        "line": 932
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 362,
+                        "durationMicroseconds": 377,
                         "errorMessage": "",
                         "functionName": "to",
-                        "line": 1016
+                        "line": 933
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 41,
-                        "durationMicroseconds": 216,
+                        "durationMicroseconds": 188,
                         "errorMessage": "",
                         "functionName": "target",
-                        "line": 1020
+                        "line": 937
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 388,
+                        "durationMicroseconds": 501,
                         "errorMessage": "",
                         "functionName": "from",
-                        "line": 1022
+                        "line": 939
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 200,
+                        "durationMicroseconds": 483,
                         "errorMessage": "",
                         "functionName": "to",
-                        "line": 1023
+                        "line": 940
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 41,
+                        "durationMicroseconds": 204,
+                        "errorMessage": "",
+                        "functionName": "target",
+                        "line": 944
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 648,
+                        "errorMessage": "",
+                        "functionName": "from",
+                        "line": 946
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 37,
+                        "durationMicroseconds": 234,
+                        "errorMessage": "",
+                        "functionName": "to",
+                        "line": 947
                     },
                     {
                         "codegenSuccessfull": true,
@@ -1457,159 +1401,127 @@
                         "durationMicroseconds": 170,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 1032
+                        "line": 956
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 257,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 1044
+                        "line": 968
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 137,
                         "errorMessage": "Cannot access value for name colorCorrect",
                         "functionName": "color",
-                        "line": 1046
+                        "line": 970
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 648,
+                        "durationMicroseconds": 452,
                         "errorMessage": "",
                         "functionName": "text",
-                        "line": 1051
+                        "line": 975
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 199,
+                        "durationMicroseconds": 173,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 1050
+                        "line": 974
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 402,
+                        "durationMicroseconds": 474,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 1059
+                        "line": 983
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 316,
+                        "durationMicroseconds": 320,
                         "errorMessage": "",
                         "functionName": "left",
-                        "line": 1060
+                        "line": 984
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 578,
+                        "durationMicroseconds": 308,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 1061
+                        "line": 985
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 322,
+                        "durationMicroseconds": 304,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 1062
+                        "line": 986
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 269,
+                        "durationMicroseconds": 278,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 1067
+                        "line": 991
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 664,
+                        "durationMicroseconds": 691,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "text",
-                        "line": 1068
+                        "line": 992
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 54,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 235,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 1072
+                        "line": 996
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 236,
+                        "durationMicroseconds": 230,
                         "errorMessage": "",
                         "functionName": "wrapMode",
-                        "line": 1073
+                        "line": 997
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 299,
+                        "durationMicroseconds": 244,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 1077
+                        "line": 1001
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 295,
+                        "durationMicroseconds": 236,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 1084
+                        "line": 1008
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 620,
-                        "errorMessage": "Cannot access value for name game",
-                        "functionName": "text",
-                        "line": 1094
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 44,
-                        "durationMicroseconds": 86,
-                        "errorMessage": "Cannot access value for name colorAccent",
-                        "functionName": "color",
-                        "line": 1097
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 43,
-                        "durationMicroseconds": 540,
+                        "durationMicroseconds": 590,
                         "errorMessage": "Cannot access value for name timer",
                         "functionName": "text",
-                        "line": 1106
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 44,
-                        "durationMicroseconds": 86,
-                        "errorMessage": "Cannot access value for name colorAccent",
-                        "functionName": "color",
-                        "line": 1109
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 43,
-                        "durationMicroseconds": 501,
-                        "errorMessage": "Cannot access value for name game",
-                        "functionName": "text",
-                        "line": 1118
+                        "line": 1018
                     },
                     {
                         "codegenSuccessfull": false,
@@ -1617,23 +1529,55 @@
                         "durationMicroseconds": 70,
                         "errorMessage": "Cannot access value for name colorAccent",
                         "functionName": "color",
-                        "line": 1121
+                        "line": 1021
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 45,
-                        "durationMicroseconds": 377,
+                        "durationMicroseconds": 345,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 1129
+                        "line": 1029
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 55,
-                        "durationMicroseconds": 358,
+                        "durationMicroseconds": 313,
                         "errorMessage": "",
                         "functionName": "horizontalCenter",
-                        "line": 1130
+                        "line": 1030
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 55,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 1042
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 48,
+                        "durationMicroseconds": 745,
+                        "errorMessage": "method backToHomeClicked cannot be resolved.",
+                        "functionName": "onClicked",
+                        "line": 1050
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 51,
+                        "durationMicroseconds": 178,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 1049
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 40,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "Cannot access value for name colorCorrect",
+                        "functionName": "color",
+                        "line": 1061
                     },
                     {
                         "codegenSuccessfull": true,
@@ -1641,167 +1585,135 @@
                         "durationMicroseconds": 184,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 1142
+                        "line": 1065
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 725,
-                        "errorMessage": "method backToHomeClicked cannot be resolved.",
-                        "functionName": "onClicked",
-                        "line": 1150
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 51,
-                        "durationMicroseconds": 205,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 1149
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 87,
-                        "errorMessage": "Cannot access value for name colorCorrect",
-                        "functionName": "color",
-                        "line": 1161
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 55,
-                        "durationMicroseconds": 198,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
-                        "line": 1165
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 48,
-                        "durationMicroseconds": 505,
+                        "durationMicroseconds": 478,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "onClicked",
-                        "line": 1173
+                        "line": 1073
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 51,
-                        "durationMicroseconds": 199,
+                        "durationMicroseconds": 168,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 1172
+                        "line": 1072
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 241,
+                        "durationMicroseconds": 239,
                         "errorMessage": "",
                         "functionName": "visible",
-                        "line": 1185
+                        "line": 1085
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 44,
-                        "durationMicroseconds": 357,
+                        "durationMicroseconds": 360,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 1188
+                        "line": 1088
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 356,
+                        "durationMicroseconds": 343,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 1189
+                        "line": 1089
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 925,
+                        "durationMicroseconds": 497,
                         "errorMessage": "",
                         "functionName": "running",
-                        "line": 1193
+                        "line": 1093
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 333,
+                        "durationMicroseconds": 224,
                         "errorMessage": "",
                         "functionName": "loops",
-                        "line": 1194
+                        "line": 1094
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 57,
-                        "durationMicroseconds": 100,
+                        "durationMicroseconds": 97,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "from",
-                        "line": 1195
+                        "line": 1095
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 76,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 93,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "to",
-                        "line": 1195
+                        "line": 1095
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 119,
-                        "durationMicroseconds": 368,
+                        "durationMicroseconds": 214,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 1195
+                        "line": 1095
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 57,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 92,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "from",
-                        "line": 1196
+                        "line": 1096
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 76,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 72,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "to",
-                        "line": 1196
+                        "line": 1096
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 119,
-                        "durationMicroseconds": 692,
+                        "durationMicroseconds": 290,
                         "errorMessage": "",
                         "functionName": "type",
-                        "line": 1196
+                        "line": 1096
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 637,
+                        "durationMicroseconds": 605,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "onPressed",
-                        "line": 1204
+                        "line": 1104
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 162,
+                        "durationMicroseconds": 388,
                         "errorMessage": "",
                         "functionName": "onPressed",
-                        "line": 1204
+                        "line": 1104
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 33,
-                        "durationMicroseconds": 115,
+                        "durationMicroseconds": 136,
                         "errorMessage": "Cannot access value for name game",
                         "functionName": "target",
-                        "line": 1254
+                        "line": 1154
                     },
                     {
                         "codegenSuccessfull": false,
@@ -1809,47 +1721,47 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "onGameEnded",
-                        "line": 1256
+                        "line": 1156
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 25,
-                        "durationMicroseconds": 334,
+                        "durationMicroseconds": 385,
                         "errorMessage": "Type QQuickItem does not have a property displayText for writing",
                         "functionName": "onGameStarted",
-                        "line": 1262
+                        "line": 1162
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 25,
-                        "durationMicroseconds": 398,
+                        "durationMicroseconds": 595,
                         "errorMessage": "Cannot load property row from QQuickItem.",
                         "functionName": "onCurrentGuessChanged",
-                        "line": 1276
+                        "line": 1176
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 173,
-                        "errorMessage": "method updateKeyboardColors cannot be resolved.",
-                        "functionName": "onKeyboardStateChanged",
-                        "line": 1293
+                        "durationMicroseconds": 97,
+                        "errorMessage": "",
+                        "functionName": "updateKeyboardColors",
+                        "line": 1193
                     },
                     {
-                        "codegenSuccessfull": false,
+                        "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 157,
-                        "errorMessage": "method updateKeyboardColors cannot be resolved.",
+                        "durationMicroseconds": 160,
+                        "errorMessage": "",
                         "functionName": "onAttemptSubmitted",
-                        "line": 1297
+                        "line": 1197
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 737,
+                        "durationMicroseconds": 711,
                         "errorMessage": "Cannot access value for name timer",
                         "functionName": "onCompleted",
-                        "line": 1312
+                        "line": 1212
                     }
                 ],
                 "filepath": "C:/Users/Sarah/Desktop/Motus_cpp/GameScreen.qml"

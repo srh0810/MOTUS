@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15
 
 Item {
     id: gameScreen
@@ -37,23 +38,7 @@ Item {
 
     // Fonction pour mettre à jour toutes les touches du clavier
     function updateKeyboardColors() {
-        // Mettre à jour la première rangée
-        for (var i1 = 0; i1 < row1Repeater.count; i1++) {
-            var key1 = row1Repeater.itemAt(i1);
-            if (key1) key1.keyStatus = getKeyStatus(key1.letter);
-        }
-
-        // Mettre à jour la deuxième rangée
-        for (var i2 = 0; i2 < row2Repeater.count; i2++) {
-            var key2 = row2Repeater.itemAt(i2);
-            if (key2) key2.keyStatus = getKeyStatus(key2.letter);
-        }
-
-        // Mettre à jour la troisième rangée
-        for (var i3 = 0; i3 < row3Repeater.count; i3++) {
-            var key3 = row3Repeater.itemAt(i3);
-            if (key3) key3.keyStatus = getKeyStatus(key3.letter);
-        }
+        // Désactivé - les touches ne changent plus de couleur
     }
 
     Connections {
@@ -167,10 +152,11 @@ Item {
                         }
 
                         Text {
-                            text: "user"
+                            text: "User1272629202"
                             color: "white"
-                            font.pixelSize: 16
+                            font.pixelSize: 14
                             Layout.fillWidth: true
+                            leftPadding: 8  // Ajoute un petit espace après l'icône
                         }
                     }
                 }
@@ -180,7 +166,7 @@ Item {
         // Barre d'outils
         Rectangle {
             Layout.fillWidth: true
-            Layout.preferredHeight: 50
+            Layout.preferredHeight: 60
             color: colorBackground
 
             RowLayout {
@@ -216,12 +202,14 @@ Item {
 
                 // Bouton sélection longueur mot
                 Rectangle {
+                    id: wordLengthButton
                     Layout.preferredWidth: 120
                     Layout.preferredHeight: 50
                     color: colorBackground
                     border.color: "white"
                     border.width: 2
                     radius: 5
+                    layer.enabled: true
 
                     RowLayout {
                         anchors.fill: parent
@@ -250,29 +238,28 @@ Item {
                     }
 
                     MouseArea {
-                        id: wordLengthMouse
                         anchors.fill: parent
-                        onClicked: {
-                            wordLengthMenu.visible = !wordLengthMenu.visible
-                        }
+                        onClicked: wordLengthMenu.open()
                     }
 
-                    // Menu pour changer la longueur du mot
-                    Rectangle {
+                    // Menu déroulant modifié
+                    Popup {
                         id: wordLengthMenu
-                        width: parent.width
+                        y: wordLengthButton.height + 2
+                        width: wordLengthButton.width
                         height: 180
-                        color: "white"
-                        visible: false
-                        anchors.top: parent.bottom
-                        z: 10
+                        padding: 0
+
+                        background: Rectangle {
+                            color: "white"
+                            border.color: "#ddd"
+                            radius: 4
+                        }
 
                         Column {
-                            anchors.fill: parent
-
+                            width: parent.width
                             Repeater {
                                 model: [3, 4, 5, 6, 7, 8]
-
                                 Rectangle {
                                     width: parent.width
                                     height: 30
@@ -290,9 +277,7 @@ Item {
                                         onClicked: {
                                             game.wordLength = modelData;
                                             game.startNewGame();
-                                            timer.reset();
-                                            timer.start();
-                                            wordLengthMenu.visible = false;
+                                            wordLengthMenu.close();
                                         }
                                     }
                                 }
@@ -304,78 +289,6 @@ Item {
                 // Espace entre les boutons
                 Item {
                     Layout.fillWidth: true
-                }
-
-                // Bouton trophée
-                Rectangle {
-                    Layout.preferredWidth: 50
-                    Layout.preferredHeight: 50
-                    color: colorBackground
-                    border.color: "white"
-                    border.width: 2
-                    radius: 5
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "🏆"
-                        color: "white"
-                        font.pixelSize: 24
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            // Ouvrir statistiques ou trophées
-                        }
-                    }
-                }
-
-                // Bouton stats
-                Rectangle {
-                    Layout.preferredWidth: 50
-                    Layout.preferredHeight: 50
-                    color: colorBackground
-                    border.color: "white"
-                    border.width: 2
-                    radius: 5
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "📊"
-                        color: "white"
-                        font.pixelSize: 24
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            // Ouvrir statistiques
-                        }
-                    }
-                }
-
-                // Bouton son
-                Rectangle {
-                    Layout.preferredWidth: 50
-                    Layout.preferredHeight: 50
-                    color: colorBackground
-                    border.color: "white"
-                    border.width: 2
-                    radius: 5
-
-                    Text {
-                        anchors.centerIn: parent
-                        text: "🔊"
-                        color: "white"
-                        font.pixelSize: 24
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            // Gestion du son
-                        }
-                    }
                 }
 
                 // Bouton aide
@@ -416,7 +329,7 @@ Item {
 
                 // Numéro de partie
                 Text {
-                    text: "Partie n°1"
+                    text: "Partie"
                     color: "white"
                     font.pixelSize: 18
                 }
@@ -452,7 +365,7 @@ Item {
                 Text {
                     text: "⏱ " + timer.displayTime
                     color: "white"
-                    font.pixelSize: 18
+                    font.pixelSize: 16
                 }
             }
         }
@@ -589,11 +502,9 @@ Item {
 
                             // Couleurs dynamiques selon l'état de la touche
                             color: {
-                                if (keyStatus === "correct") return colorCorrect;      // Vert
-                                if (keyStatus === "misplaced") return colorMisplaced;  // Orange
-                                if (keyStatus === "wrong") return colorWrong;          // Gris
-                                return colorBackground;  // Fond par défaut
+                                return colorKeyboardBg;  // Fond par défaut
                             }
+                            border.color: "#ffffff"
 
                             Text {
                                 anchors.centerIn: parent
@@ -646,11 +557,9 @@ Item {
                             property string keyStatus: getKeyStatus(letter)
 
                             color: {
-                                if (keyStatus === "correct") return colorCorrect;
-                                if (keyStatus === "misplaced") return colorMisplaced;
-                                if (keyStatus === "wrong") return colorWrong;
-                                return colorBackground;  // Fond par défaut
+                                return colorKeyboardBg;  // Fond par défaut
                             }
+                            border.color: "#ffffff"
 
                             Text {
                                 anchors.centerIn: parent
@@ -737,11 +646,9 @@ Item {
                             property string keyStatus: getKeyStatus(letter)
 
                             color: {
-                                if (keyStatus === "correct") return colorCorrect;
-                                if (keyStatus === "misplaced") return colorMisplaced;
-                                if (keyStatus === "wrong") return colorWrong;
-                                return colorBackground;  // Fond par défaut
+                                return colorKeyboardBg;  // Fond par défaut
                             }
+                            border.color: "#ffffff"
 
                             Text {
                                 anchors.centerIn: parent
@@ -950,14 +857,31 @@ Item {
                         visible: false
                         z: 100
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: "Ce mot n'existe pas dans le dictionnaire."
-                            font.pixelSize: 16
-                            width: parent.width - 40
-                            wrapMode: Text.WordWrap
-                            horizontalAlignment: Text.AlignHCenter
-                        }
+                        // Conteneur pour le texte (ajouté)
+                            Column {
+                                anchors.top: parent.top
+                                anchors.topMargin: 25  // Ajustez cette valeur pour positionner verticalement
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                width: parent.width - 40
+                                spacing: 5
+
+                                Text {
+                                    width: parent.width
+                                    text: "Ce mot n'existe pas"
+                                    font.pixelSize: 16
+                                    horizontalAlignment: Text.AlignHCenter
+                                    wrapMode: Text.Wrap
+                                }
+
+                                Text {
+                                    width: parent.width
+                                    text: "dans le dictionnaire"
+                                    font.pixelSize: 16
+                                    horizontalAlignment: Text.AlignHCenter
+                                    wrapMode: Text.Wrap
+                                }
+                            }
+
 
                         Rectangle {
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -1086,36 +1010,12 @@ Item {
                                 spacing: 10
 
                                 Text {
-                                    text: "Score :"
-                                    font.pixelSize: 16
-                                }
-
-                                Text {
-                                    text: game.score + " points"
-                                    font.pixelSize: 16
-                                    font.bold: true
-                                    color: colorAccent
-                                }
-
-                                Text {
                                     text: "Temps :"
                                     font.pixelSize: 16
                                 }
 
                                 Text {
                                     text: timer.displayTime
-                                    font.pixelSize: 16
-                                    font.bold: true
-                                    color: colorAccent
-                                }
-
-                                Text {
-                                    text: "Essais :"
-                                    font.pixelSize: 16
-                                }
-
-                                Text {
-                                    text: game.currentAttempt + "/6"
                                     font.pixelSize: 16
                                     font.bold: true
                                     color: colorAccent
@@ -1290,8 +1190,8 @@ Item {
                             }
                         }
 
-                        function onKeyboardStateChanged() {
-                                updateKeyboardColors();
+                        function updateKeyboardColors() {
+                            // Désactivé - les touches ne changent plus de couleur
                         }
 
                         function onAttemptSubmitted() {
