@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../game.h"
+#include "../../../../../motus/Motus_cpp/game.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -57,6 +57,8 @@ static constexpr auto qt_meta_stringdata_ZN4GameE = QtMocHelpers::stringData(
     "row",
     "col",
     "letter",
+    "letterRevealed",
+    "position",
     "startNewGame",
     "checkGuess",
     "QVariantList",
@@ -64,6 +66,7 @@ static constexpr auto qt_meta_stringdata_ZN4GameE = QtMocHelpers::stringData(
     "isValidWord",
     "word",
     "abandonGame",
+    "revealRandomLetter",
     "keyPressed",
     "key",
     "backspacePressed",
@@ -95,40 +98,42 @@ Q_CONSTINIT static const uint qt_meta_data_ZN4GameE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      24,   14, // methods
-      12,  202, // properties
+      26,   14, // methods
+      12,  220, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-      14,       // signalCount
+      15,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  158,    2, 0x06,   13 /* Public */,
-       3,    0,  159,    2, 0x06,   14 /* Public */,
-       4,    0,  160,    2, 0x06,   15 /* Public */,
-       5,    0,  161,    2, 0x06,   16 /* Public */,
-       6,    0,  162,    2, 0x06,   17 /* Public */,
-       7,    0,  163,    2, 0x06,   18 /* Public */,
-       8,    1,  164,    2, 0x06,   19 /* Public */,
-      10,    0,  167,    2, 0x06,   21 /* Public */,
-      11,    0,  168,    2, 0x06,   22 /* Public */,
-      12,    0,  169,    2, 0x06,   23 /* Public */,
-      13,    0,  170,    2, 0x06,   24 /* Public */,
-      14,    0,  171,    2, 0x06,   25 /* Public */,
-      15,    0,  172,    2, 0x06,   26 /* Public */,
-      16,    3,  173,    2, 0x06,   27 /* Public */,
+       1,    0,  170,    2, 0x06,   13 /* Public */,
+       3,    0,  171,    2, 0x06,   14 /* Public */,
+       4,    0,  172,    2, 0x06,   15 /* Public */,
+       5,    0,  173,    2, 0x06,   16 /* Public */,
+       6,    0,  174,    2, 0x06,   17 /* Public */,
+       7,    0,  175,    2, 0x06,   18 /* Public */,
+       8,    1,  176,    2, 0x06,   19 /* Public */,
+      10,    0,  179,    2, 0x06,   21 /* Public */,
+      11,    0,  180,    2, 0x06,   22 /* Public */,
+      12,    0,  181,    2, 0x06,   23 /* Public */,
+      13,    0,  182,    2, 0x06,   24 /* Public */,
+      14,    0,  183,    2, 0x06,   25 /* Public */,
+      15,    0,  184,    2, 0x06,   26 /* Public */,
+      16,    3,  185,    2, 0x06,   27 /* Public */,
+      20,    2,  192,    2, 0x06,   31 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-      20,    0,  180,    2, 0x02,   31 /* Public */,
-      21,    1,  181,    2, 0x02,   32 /* Public */,
-      24,    1,  184,    2, 0x02,   34 /* Public */,
-      26,    0,  187,    2, 0x02,   36 /* Public */,
-      27,    1,  188,    2, 0x02,   37 /* Public */,
-      29,    0,  191,    2, 0x02,   39 /* Public */,
-      30,    0,  192,    2, 0x02,   40 /* Public */,
-      31,    0,  193,    2, 0x02,   41 /* Public */,
-      32,    2,  194,    2, 0x02,   42 /* Public */,
-      34,    1,  199,    2, 0x102,   45 /* Public | MethodIsConst  */,
+      22,    0,  197,    2, 0x02,   34 /* Public */,
+      23,    1,  198,    2, 0x02,   35 /* Public */,
+      26,    1,  201,    2, 0x02,   37 /* Public */,
+      28,    0,  204,    2, 0x02,   39 /* Public */,
+      29,    0,  205,    2, 0x02,   40 /* Public */,
+      30,    1,  206,    2, 0x02,   41 /* Public */,
+      32,    0,  209,    2, 0x02,   43 /* Public */,
+      33,    0,  210,    2, 0x02,   44 /* Public */,
+      34,    0,  211,    2, 0x02,   45 /* Public */,
+      35,    2,  212,    2, 0x02,   46 /* Public */,
+      37,    1,  217,    2, 0x102,   49 /* Public | MethodIsConst  */,
 
  // signals: parameters
     QMetaType::Void,
@@ -145,32 +150,34 @@ Q_CONSTINIT static const uint qt_meta_data_ZN4GameE[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::QString,   17,   18,   19,
+    QMetaType::Void, QMetaType::Int, QMetaType::QString,   21,   19,
 
  // methods: parameters
     QMetaType::Void,
-    0x80000000 | 22, QMetaType::QString,   23,
-    QMetaType::Bool, QMetaType::QString,   25,
+    0x80000000 | 24, QMetaType::QString,   25,
+    QMetaType::Bool, QMetaType::QString,   27,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   28,
+    QMetaType::QString,
+    QMetaType::Void, QMetaType::QString,   31,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    0x80000000 | 33, QMetaType::Int, QMetaType::Int,   17,   18,
-    QMetaType::QString, QMetaType::QString,   28,
+    0x80000000 | 36, QMetaType::Int, QMetaType::Int,   17,   18,
+    QMetaType::QString, QMetaType::QString,   31,
 
  // properties: name, type, flags, notifyId, revision
-      35, QMetaType::QString, 0x00015001, uint(0), 0,
-      36, QMetaType::QString, 0x00015001, uint(1), 0,
-      37, QMetaType::Int, 0x00015001, uint(2), 0,
-      38, QMetaType::Int, 0x00015001, uint(3), 0,
-      39, QMetaType::Bool, 0x00015001, uint(4), 0,
-      40, QMetaType::Bool, 0x00015001, uint(4), 0,
-      41, QMetaType::Bool, 0x00015001, uint(4), 0,
-      42, QMetaType::Int, 0x00015103, uint(7), 0,
-      43, QMetaType::Int, 0x00015001, uint(8), 0,
-      44, 0x80000000 | 22, 0x00015009, uint(9), 0,
-      45, 0x80000000 | 22, 0x00015009, uint(10), 0,
-      46, QMetaType::QString, 0x00015001, uint(11), 0,
+      38, QMetaType::QString, 0x00015001, uint(0), 0,
+      39, QMetaType::QString, 0x00015001, uint(1), 0,
+      40, QMetaType::Int, 0x00015001, uint(2), 0,
+      41, QMetaType::Int, 0x00015001, uint(3), 0,
+      42, QMetaType::Bool, 0x00015001, uint(4), 0,
+      43, QMetaType::Bool, 0x00015001, uint(4), 0,
+      44, QMetaType::Bool, 0x00015001, uint(4), 0,
+      45, QMetaType::Int, 0x00015103, uint(7), 0,
+      46, QMetaType::Int, 0x00015001, uint(8), 0,
+      47, 0x80000000 | 24, 0x00015009, uint(9), 0,
+      48, 0x80000000 | 24, 0x00015009, uint(10), 0,
+      49, QMetaType::QString, 0x00015001, uint(11), 0,
 
        0        // eod
 };
@@ -240,6 +247,10 @@ Q_CONSTINIT const QMetaObject Game::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'letterRevealed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'startNewGame'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'checkGuess'
@@ -250,6 +261,8 @@ Q_CONSTINIT const QMetaObject Game::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'abandonGame'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'revealRandomLetter'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'keyPressed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
@@ -289,19 +302,22 @@ void Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 11: _t->currentGuessChanged(); break;
         case 12: _t->invalidWord(); break;
         case 13: _t->letterInserted((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
-        case 14: _t->startNewGame(); break;
-        case 15: { QVariantList _r = _t->checkGuess((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 14: _t->letterRevealed((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 15: _t->startNewGame(); break;
+        case 16: { QVariantList _r = _t->checkGuess((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QVariantList*>(_a[0]) = std::move(_r); }  break;
-        case 16: { bool _r = _t->isValidWord((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 17: { bool _r = _t->isValidWord((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 17: _t->abandonGame(); break;
-        case 18: _t->keyPressed((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 19: _t->backspacePressed(); break;
-        case 20: _t->enterPressed(); break;
-        case 21: _t->resetCurrentGuess(); break;
-        case 22: { QVariantMap _r = _t->getCellInfo((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
+        case 18: _t->abandonGame(); break;
+        case 19: { QString _r = _t->revealRandomLetter();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 20: _t->keyPressed((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 21: _t->backspacePressed(); break;
+        case 22: _t->enterPressed(); break;
+        case 23: _t->resetCurrentGuess(); break;
+        case 24: { QVariantMap _r = _t->getCellInfo((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])));
             if (_a[0]) *reinterpret_cast< QVariantMap*>(_a[0]) = std::move(_r); }  break;
-        case 23: { QString _r = _t->getKeyStatus((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 25: { QString _r = _t->getKeyStatus((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -406,6 +422,13 @@ void Game::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
                 return;
             }
         }
+        {
+            using _q_method_type = void (Game::*)(int , QString );
+            if (_q_method_type _q_method = &Game::letterRevealed; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+                *result = 14;
+                return;
+            }
+        }
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
@@ -453,14 +476,14 @@ int Game::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 24)
+        if (_id < 26)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 24;
+        _id -= 26;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 24)
+        if (_id < 26)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 24;
+        _id -= 26;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
@@ -555,5 +578,12 @@ void Game::letterInserted(int _t1, int _t2, const QString & _t3)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))) };
     QMetaObject::activate(this, &staticMetaObject, 13, _a);
+}
+
+// SIGNAL 14
+void Game::letterRevealed(int _t1, QString _t2)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    QMetaObject::activate(this, &staticMetaObject, 14, _a);
 }
 QT_WARNING_POP

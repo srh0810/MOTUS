@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Sarah/Desktop/Motus_cpp
+# Install script for directory: C:/Users/Sarah/Desktop/motus/Motus_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

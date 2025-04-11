@@ -6,7 +6,7 @@
             "methods": [
                 {
                     "access": "public",
-                    "index": 14,
+                    "index": 15,
                     "name": "startNewGame",
                     "returnType": "void"
                 },
@@ -18,7 +18,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 15,
+                    "index": 16,
                     "name": "checkGuess",
                     "returnType": "QVariantList"
                 },
@@ -30,15 +30,21 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 16,
+                    "index": 17,
                     "name": "isValidWord",
                     "returnType": "bool"
                 },
                 {
                     "access": "public",
-                    "index": 17,
+                    "index": 18,
                     "name": "abandonGame",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 19,
+                    "name": "revealRandomLetter",
+                    "returnType": "QString"
                 },
                 {
                     "access": "public",
@@ -48,25 +54,25 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 18,
+                    "index": 20,
                     "name": "keyPressed",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 19,
+                    "index": 21,
                     "name": "backspacePressed",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 20,
+                    "index": 22,
                     "name": "enterPressed",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 21,
+                    "index": 23,
                     "name": "resetCurrentGuess",
                     "returnType": "void"
                 },
@@ -82,7 +88,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 22,
+                    "index": 24,
                     "name": "getCellInfo",
                     "returnType": "QVariantMap"
                 },
@@ -94,7 +100,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 23,
+                    "index": 25,
                     "name": "getKeyStatus",
                     "returnType": "QString"
                 }
@@ -375,6 +381,22 @@
                     ],
                     "index": 13,
                     "name": "letterInserted",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "position",
+                            "type": "int"
+                        },
+                        {
+                            "name": "letter",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "letterRevealed",
                     "returnType": "void"
                 }
             ],

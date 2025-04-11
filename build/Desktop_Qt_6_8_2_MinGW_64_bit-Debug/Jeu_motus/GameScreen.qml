@@ -450,21 +450,44 @@ Item {
 
         // Bouton d'indice
         Rectangle {
+            id: hintBanner
             Layout.fillWidth: true
             Layout.preferredHeight: 50
             color: "#65c1e6"  // Bleu clair
+            opacity: mouseArea.containsMouse ? 0.8 : 1.0
 
             Text {
                 anchors.centerIn: parent
-                text: "Bloqué ? Affichez une lettre supplémentaire"
+                text: "Bloqué ? Affichez une lettre"
                 font.pixelSize: 18
                 color: "black"
             }
 
             MouseArea {
+                id: hintMouseArea  // Nouvel ID unique
                 anchors.fill: parent
+                hoverEnabled: true
                 onClicked: {
-                    // Logique pour afficher une lettre supplémentaire
+                    const revealed = game.revealRandomLetter();
+                    if (revealed === "") {
+                        hintAnimation.start();
+                    }
+                }
+            }
+
+            SequentialAnimation {
+                id: hintAnimation
+                PropertyAnimation {
+                    target: hintBanner
+                    property: "color"
+                    to: "#ff5555"
+                    duration: 200
+                }
+                PropertyAnimation {
+                    target: hintBanner
+                    property: "color"
+                    to: "#65c1e6"
+                    duration: 200
                 }
             }
         }

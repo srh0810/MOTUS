@@ -27,8 +27,6 @@ set(QML_FILES
     Main.qml
     HomeScreen.qml
     GameScreen.qml
-    RulesScreen.qml
-    EndScreen.qml
 )
 
 # Liste des ressources
@@ -54,6 +52,11 @@ qt_add_resources(appJeu_motus "qml_resources"
     FILES ${QML_FILES} ${RESOURCES}
 )
 
+# Copier le dictionnaire dans le répertoire de build
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/dictionnaire.txt
+               ${CMAKE_CURRENT_BINARY_DIR}/dictionnaire.txt
+               COPYONLY)
+
 set_target_properties(appJeu_motus PROPERTIES
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -71,3 +74,4 @@ install(TARGETS appJeu_motus
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+

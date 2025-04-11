@@ -5,7 +5,7 @@
 
 Game::Game(QObject *parent)
     : QObject(parent)
-    , m_dictionary(":/dictionnaire.txt")
+    , m_dictionary("./dictionnaire.txt")
     , m_wordLength(4)  // Commencer avec 4 lettres comme dans l'image
     , m_maxAttempts(6)
     , m_score(0)
@@ -26,6 +26,9 @@ void Game::startNewGame()
     m_gameActive = true;
     m_currentAttempt = 0;
     m_currentGuess = "";
+
+    // Réinitialiser les indices révélés
+    m_revealedIndices.clear();
 
     // Sélection d'un mot aléatoire et création du masque
     selectRandomWord();
@@ -105,45 +108,115 @@ void Game::abandonGame()
     }
 }
 
+
 void Game::keyPressed(const QString &key)
 {
-    if (!m_gameActive || m_currentGuess.length() >= m_wordLength)
+    if (!m_gameActive)
         return;
 
     // Converti la touche en majuscule pour uniformité
     QString upperKey = key.toUpper();
 
-    // Ajoute la lettre à la devinette en cours
-    m_currentGuess += upperKey;
-    emit letterInserted(m_currentAttempt, m_currentGuess.length() - 1, upperKey);
-    emit currentGuessChanged();
+    // Assurer que currentGuess est de la bonne longueur
+    while (m_currentGuess.length() < m_wordLength) {
+        m_currentGuess.append(' ');
+    }
+
+    // Chercher la première position non révélée et vide
+    for (int i = 0; i < m_wordLength; i++) {
+        // Sauter les positions révélées
+        if (m_revealedIndices.contains(i))
+            continue;
+
+        // Si cette position est vide, on y met la lettre
+        if (m_currentGuess[i] == ' ') {
+            m_currentGuess[i] = upperKey[0];
+            emit letterInserted(m_currentAttempt, i, upperKey);
+            emit currentGuessChanged();
+            return;
+        }
+    }
 }
+
+
 
 void Game::backspacePressed()
 {
     if (!m_gameActive || m_currentGuess.isEmpty())
         return;
 
-    // Supprime la dernière lettre
-    m_currentGuess.chop(1);
-    emit letterInserted(m_currentAttempt, m_currentGuess.length(), "");
-    emit currentGuessChanged();
+    /// Trouver la dernière lettre modifiable (non révélée)
+    int pos = m_currentGuess.length() - 1;
+
+    while (pos >= 0 && m_revealedIndices.contains(pos)) {
+        pos--;
+    }
+
+    if (pos >= 0) {
+        // Supprimer la lettre à cette position
+        if (pos == m_currentGuess.length() - 1) {
+            m_currentGuess.chop(1);
+        } else {
+            // Remplacer par un espace si c'est au milieu
+            m_currentGuess[pos] = ' ';
+        }
+        emit letterInserted(m_currentAttempt, pos, "");
+        emit currentGuessChanged();
+    }
 }
+
+
+
 void Game::enterPressed()
 {
-    if (!m_gameActive || m_currentGuess.length() != m_wordLength)
+    // Remplissons d'abord les espaces vides pour un mot complet
+    QString completeGuess = m_currentGuess;
+    while (completeGuess.length() < m_wordLength) {
+        completeGuess.append(' ');
+    }
+
+    // Remplacer les espaces par des lettres aléatoires pour la vérification
+    QString checkGuess = completeGuess;
+    for (int i = 0; i < checkGuess.length(); i++) {
+        if (checkGuess[i] == ' ') {
+            checkGuess[i] = 'A'; // N'importe quelle lettre pour la vérification
+        }
+    }
+
+    if (!m_gameActive || checkGuess.length() != m_wordLength)
         return;
 
     // Vérification du dictionnaire avant tout
-    if (!isValidWord(m_currentGuess)) {
-        qDebug() << "Mot non valide:" << m_currentGuess;
+    if (!isValidWord(checkGuess)) {
+        qDebug() << "Mot non valide:" << checkGuess;
         emit invalidWord();
-        resetCurrentGuess();
+        // Ne pas réinitialiser currentGuess pour garder les lettres déjà tapées
         return;
     }
 
+    // Appliquer les lettres révélées à la tentative actuelle
+    for (int idx : m_revealedIndices) {
+        if (idx < m_currentGuess.length()) {
+            m_currentGuess[idx] = m_currentWord[idx];
+        } else {
+            // Ajouter des espaces si nécessaire
+            while (m_currentGuess.length() < idx) {
+                m_currentGuess.append(' ');
+            }
+            m_currentGuess.append(m_currentWord[idx]);
+        }
+    }
+
+    // Remplacer les espaces restants par des lettres aléatoires pour la vérification
+    QString finalGuess = m_currentGuess;
+    for (int i = 0; i < finalGuess.length(); i++) {
+        if (finalGuess[i] == ' ') {
+            finalGuess[i] = 'A'; // N'importe quelle lettre pour la vérification
+        }
+    }
+
     // Le reste de la logique existante...
-    QVariantList result = checkGuess(m_currentGuess);
+    QVariantList result = this->checkGuess(finalGuess);
 
     if (result.isEmpty()) return;
 
@@ -171,15 +244,32 @@ void Game::enterPressed()
         }
     }
 
-    m_currentGuess = "";
+    // Prépare un nouveau guess avec les lettres révélées
+    QString newGuess = "";
+    for (int i = 0; i < m_wordLength; i++) {
+        if (m_revealedIndices.contains(i)) {
+            // Ajouter les espaces nécessaires
+            while (newGuess.length() < i) {
+                newGuess.append(' ');
+            }
+            newGuess.append(m_currentWord[i]);
+        }
+    }
+
+    m_currentGuess = newGuess;
     emit currentGuessChanged();
-    emit gridChanged(); // Émission explicite
+    emit gridChanged();
 }
+
+
+
+
 void Game::resetCurrentGuess()
 {
     m_currentGuess = "";
     emit currentGuessChanged();
 }
+
 
 QVariantMap Game::getCellInfo(int row, int col)
 {
@@ -193,13 +283,22 @@ QVariantMap Game::getCellInfo(int row, int col)
     // Ligne active en cours de saisie
     if (row == m_currentAttempt) {
         if (col < m_currentGuess.length()) {
-            cell["letter"] = m_currentGuess[col];
-            cell["status"] = "typing";
+            // Ne pas afficher les espaces dans la grille
+            if (m_currentGuess[col] != ' ') {
+                cell["letter"] = m_currentGuess[col];
+
+                // Si c'est une lettre révélée (elle correspond au mot secret), on la marque comme correcte
+                if (m_currentGuess[col].toUpper() == m_currentWord[col].toUpper()) {
+                    cell["status"] = "correct";
+                } else {
+                    cell["status"] = "typing";
+                }
+            }
         }
         return cell;
     }
 
-    // Lignes validées
+    // Lignes validées (reste inchangé)
     if (row < m_currentAttempt && row < m_grid.size()) {
         QVariantList rowData = m_grid[row].toList();
         if (col < rowData.size()) {
@@ -209,6 +308,9 @@ QVariantMap Game::getCellInfo(int row, int col)
 
     return cell;
 }
+
+
+
 void Game::setWordLength(int length)
 {
     if (m_wordLength != length && length >= 3 && length <= 10) {
@@ -399,4 +501,48 @@ void Game::addPoints(int correctLetters)
     points += (m_maxAttempts - m_currentAttempt) * 5;
     m_score += points;
     emit scoreChanged();
+}
+
+QString Game::revealRandomLetter() {
+    // Vérifie si le jeu est actif
+    if (!m_gameActive) {
+        return "";
+    }
+
+    // Trouve les indices des lettres qui peuvent être révélées
+    QList<int> possibleIndices;
+    for (int i = 0; i < m_currentWord.length(); i++) {
+        // Exclure les lettres déjà révélées
+        if (!m_revealedIndices.contains(i)) {
+            possibleIndices.append(i);
+        }
+    }
+
+    // Aucune lettre à révéler
+    if (possibleIndices.isEmpty()) {
+        return "";
+    }
+
+    // Choisit une lettre aléatoire
+    int randomIndex = possibleIndices[QRandomGenerator::global()->bounded(possibleIndices.size())];
+    m_revealedIndices.append(randomIndex);
+
+    // Met à jour la tentative actuelle pour inclure la lettre révélée
+    if (randomIndex >= m_currentGuess.length()) {
+        // Ajoute des espaces si nécessaire
+        while (m_currentGuess.length() < randomIndex) {
+            m_currentGuess.append(' ');
+        }
+        // Ajoute la lettre révélée
+        m_currentGuess.append(m_currentWord[randomIndex]);
+    } else {
+        // Remplace la lettre à la position spécifiée
+        m_currentGuess[randomIndex] = m_currentWord[randomIndex];
+    }
+
+    // Notifie les changements
+    emit currentGuessChanged();
+    emit letterRevealed(randomIndex, QString(m_currentWord[randomIndex]));
+
+    return QString(m_currentWord[randomIndex]);
 }

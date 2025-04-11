@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../timer.h"
+#include "../../../../../motus/Motus_cpp/timer.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>

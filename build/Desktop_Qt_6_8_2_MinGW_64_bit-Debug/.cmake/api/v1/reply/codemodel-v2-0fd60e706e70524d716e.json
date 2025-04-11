@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3ebe22f2f0de001de1f3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Jeu_motus",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-2a67ff60576a39529ef2.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-9e5a77530b1233ee8748.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-32a5f0819288a7c9f76a.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-13a6c93ecab7c939ead1.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-e03d3c3bc664f01f9149.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus-Debug-b77cf07d60993e44ea4d.json",
+					"name" : "appJeu_motus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_autogen-Debug-aef7fb2c82636fc566b8.json",
+					"name" : "appJeu_motus_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_autogen_timestamp_deps-Debug-49df68b8d48e3903221e.json",
+					"name" : "appJeu_motus_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_copy_qml-Debug-d83147bafb74e4baa7f6.json",
+					"name" : "appJeu_motus_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_copy_res-Debug-42c7b1c20b37bc3cb0b7.json",
+					"name" : "appJeu_motus_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_qmlimportscan-Debug-fa59e47b598a3673ce55.json",
+					"name" : "appJeu_motus_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_qmllint-Debug-547308f2e4b046895bda.json",
+					"name" : "appJeu_motus_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_qmllint_json-Debug-2f3cbc918bc7e82f9141.json",
+					"name" : "appJeu_motus_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_qmllint_module-Debug-1bbdeb6ad0c978072531.json",
+					"name" : "appJeu_motus_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJeu_motus_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJeu_motus_qmltyperegistration-Debug-10440b246bd9e0fd9183.json",
+					"name" : "appJeu_motus_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appJeu_motus_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appJeu_motus_aotstats_target-Debug-ad64f370e929ec3d565e.json",
+					"name" : "module_appJeu_motus_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Sarah/Desktop/Motus_cpp/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Sarah/Desktop/Motus_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../dictionary.h"
+#include "../../../../../motus/Motus_cpp/dictionary.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>

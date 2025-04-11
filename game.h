@@ -37,6 +37,7 @@ public:
     Q_INVOKABLE QVariantList checkGuess(const QString &guess);
     Q_INVOKABLE bool isValidWord(const QString &word);
     Q_INVOKABLE void abandonGame();
+    Q_INVOKABLE QString revealRandomLetter();
 
     // Nouvelles méthodes pour le clavier virtuel et grille
     Q_INVOKABLE void keyPressed(const QString &key);
@@ -79,6 +80,7 @@ signals:
     void currentGuessChanged();
     void invalidWord();
     void letterInserted(int row, int col, const QString &letter);
+    void letterRevealed(int position, QString letter);
 
 private:
     // Méthodes privées
@@ -104,6 +106,11 @@ private:
     bool m_gameActive;
     QVariantList m_grid;
     QVariantList m_keyboardState;
+
+    QString m_targetWord;
+    QList<bool> m_revealedLetters; // Pour suivre les lettres déjà révélées
+    QList<int> m_revealedIndices; // Pour stocker les indices des lettres révélées
+
 };
 
 #endif // GAME_H

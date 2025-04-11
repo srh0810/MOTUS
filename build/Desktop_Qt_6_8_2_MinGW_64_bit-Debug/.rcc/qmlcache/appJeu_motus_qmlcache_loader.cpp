@@ -26,20 +26,6 @@ namespace _qt_qml_Jeu_motus_GameScreen_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_Jeu_motus_RulesScreen_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
-namespace _qt_qml_Jeu_motus_EndScreen_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
 
 }
 namespace {
@@ -57,8 +43,6 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Jeu_motus/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_Jeu_motus_Main_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Jeu_motus/HomeScreen.qml"), &QmlCacheGeneratedCode::_qt_qml_Jeu_motus_HomeScreen_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Jeu_motus/GameScreen.qml"), &QmlCacheGeneratedCode::_qt_qml_Jeu_motus_GameScreen_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Jeu_motus/RulesScreen.qml"), &QmlCacheGeneratedCode::_qt_qml_Jeu_motus_RulesScreen_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Jeu_motus/EndScreen.qml"), &QmlCacheGeneratedCode::_qt_qml_Jeu_motus_EndScreen_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;
