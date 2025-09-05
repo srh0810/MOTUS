@@ -1,7 +1,0 @@
-module Jeu_motus
-typeinfo appJeu_motus.qmltypes
-prefer :/qt/qml/Jeu_motus/
-Main 1.0 Main.qml
-HomeScreen 1.0 HomeScreen.qml
-GameScreen 1.0 GameScreen.qml
-

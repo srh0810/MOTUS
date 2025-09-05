@@ -1,3 +1,0 @@
-set(__QT_DEPLOY_TARGET_appJeu_motus_FILE C:/Users/Sarah/Desktop/Motus_cpp/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/appJeu_motus.exe)
-set(__QT_DEPLOY_TARGET_appJeu_motus_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_appJeu_motus_RUNTIME_DLLS C:/Qt/6.8.2/mingw_64/bin/Qt6QuickControls2.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6QuickTemplates2.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6Quick.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6QmlMeta.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6QmlWorkerScript.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6QmlModels.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6Qml.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6Network.dll;C:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll)

@@ -1,9 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/Jeu_motus/">
-    <file alias="Main.qml">C:/Users/Sarah/Desktop/motus/Motus_cpp/Main.qml</file>
-    <file alias="HomeScreen.qml">C:/Users/Sarah/Desktop/motus/Motus_cpp/HomeScreen.qml</file>
-    <file alias="GameScreen.qml">C:/Users/Sarah/Desktop/motus/Motus_cpp/GameScreen.qml</file>
-    <file alias="dictionnaire.txt">C:/Users/Sarah/Desktop/motus/Motus_cpp/dictionnaire.txt</file>
-  </qresource>
-</RCC>
-
